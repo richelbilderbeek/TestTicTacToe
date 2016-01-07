@@ -25,8 +25,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "testtimer.h"
 #include "trace.h"
 
-#include "richelbilderbeekprogram.h"
-
 ribi::TestTicTacToeMenuDialog::TestTicTacToeMenuDialog()
 {
   #ifndef NDEBUG
@@ -51,8 +49,8 @@ ribi::About ribi::TestTicTacToeMenuDialog::GetAbout() const noexcept
     "Richel Bilderbeek",
     "TestTicTacToe",
     "tool to test the TicTacToe class",
-    "the 15th of Oktober 2013",
-    "2011-2015",
+    "January 7th of 2016",
+    "2011-2016",
     "http://www.richelbilderbeek.nl/ToolTestTicTacToe.htm",
     GetVersion(),
     GetVersionHistory());
@@ -74,18 +72,9 @@ ribi::Help ribi::TestTicTacToeMenuDialog::GetHelp() const noexcept
   );
 }
 
-boost::shared_ptr<const ribi::Program> ribi::TestTicTacToeMenuDialog::GetProgram() const noexcept
-{
-  const boost::shared_ptr<const Program> p {
-    new ProgramTestTicTacToe
-  };
-  assert(p);
-  return p;
-}
-
 std::string ribi::TestTicTacToeMenuDialog::GetVersion() const noexcept
 {
-  return "1.4";
+  return "2.0";
 }
 
 std::vector<std::string> ribi::TestTicTacToeMenuDialog::GetVersionHistory() const noexcept
@@ -95,7 +84,8 @@ std::vector<std::string> ribi::TestTicTacToeMenuDialog::GetVersionHistory() cons
     "2010-09-22: version 1.1: use of TicTacToeWidget",
     "2011-01-06: version 1.2: merge with Wt application",
     "2011-01-06: version 1.3: moved TicTacToe and QtTicTacToeWidget to different folders",
-    "2013-10-14: version 1.4: conformized to ProjectRichelBilderbeek"
+    "2013-10-14: version 1.4: conformized to ProjectRichelBilderbeek",
+    "2016-01-07: version 2.0: moved to own GitHub"
   };
 }
 
